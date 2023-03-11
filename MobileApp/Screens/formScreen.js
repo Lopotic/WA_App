@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect, setState } from 'react';
-import {Text, View, StyleSheet, TextInput, ImageBackground } from 'react-native';
+import {Text, View, StyleSheet, TextInput, ImageBackground, ScrollView } from 'react-native';
 import * as SQLite from 'expo-sqlite';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -38,25 +38,27 @@ export default function Form(){
 
     return(
       <ImageBackground  source={require('../assets/fof.png')} style={{width: '100%', height: '100%'}}>
-      <View style={styles.container}>
-        <View style={styles.pop}>
-          <Text style={styles.nadpis}>Vyplňte informace</Text>
-          <MaterialCommunityIcons style = { styles.icon } name='card-account-details-outline'/>
+      <ScrollView>
+        <View style={styles.container}>
+          <View style={styles.pop}>
+            <Text style={styles.nadpis}>Vyplňte informace</Text>
+            <MaterialCommunityIcons style = { styles.icon } name='card-account-details-outline'/>
+          </View>
+          <Text style={styles.text}>Jméno</Text>
+          <TextInput style={styles.inputs} onChangeText={text => setName(text)} placeholder='Name'/>
+        
+          <Text style={styles.text}>Příjmení</Text>
+          <TextInput onChangeText={text => setSurname(text)} placeholder='Surname'/>
+
+          <Text style={styles.text}>Telefoní číslo</Text>
+          <TextInput onChangeText={text => setMobile(text)} placeholder='Mobile Phone'/>
+        
+          <Text style={styles.text}>E-mail</Text>
+          <TextInput onChangeText={text => setMail(text)} placeholder='Email'/>
+
+          <MyButton title='ULOŽIT' onPress={handleSave} />
         </View>
-        <Text style={styles.text}>Jméno</Text>
-        <TextInput style={styles.inputs} onChangeText={text => setName(text)} placeholder='Name'/>
-        
-        <Text style={styles.text}>Příjmení</Text>
-        <TextInput onChangeText={text => setSurname(text)} placeholder='Surname'/>
-
-        <Text style={styles.text}>Telefoní číslo</Text>
-        <TextInput onChangeText={text => setMobile(text)} placeholder='Mobile Phone'/>
-        
-        <Text style={styles.text}>E-mail</Text>
-        <TextInput onChangeText={text => setMail(text)} placeholder='Email'/>
-
-        <MyButton title='ULOŽIT' onPress={handleSave} />
-      </View>
+      </ScrollView>
       </ImageBackground>
     )
   }

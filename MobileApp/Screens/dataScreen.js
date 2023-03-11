@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'center',
-      marginVertical: 15,      
+      marginVertical: 15,
+      marginTop: -80,      
 
     },
     data: {
