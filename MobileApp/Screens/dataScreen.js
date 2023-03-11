@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { ScrollView, SafeAreaView, Text, View, StyleSheet} from 'react-native';
+import { ScrollView, SafeAreaView, Text, View, StyleSheet, ImageBackground} from 'react-native';
 
 import Delete from '../components/delete';
 import MyButton from '../components/button';
@@ -45,6 +45,7 @@ export default function DataScreen(){
   };
 
   return(
+    <ImageBackground  source={require('../assets/fof.png')} style={{width: '100%', height: '100%'}}>
     <ScrollView>
       <SafeAreaView style={styles.container}>
         <MyButton title='Load Data' onPress={fetchUsers}/>
@@ -57,6 +58,7 @@ export default function DataScreen(){
         ))}
       </SafeAreaView>
     </ScrollView>
+    </ImageBackground>
   )
 }
 
