@@ -12,6 +12,8 @@ export default function Delete(props) {
     );
 }
 
+
+
 const styles = StyleSheet.create({
     button: {
       alignItems: 'center',
