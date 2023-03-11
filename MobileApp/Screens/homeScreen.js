@@ -1,19 +1,40 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image ,ImageBackground} from 'react-native';
 import colors from '../components/colors';
 
 export default function HomeScreen({navigation}){
     return(
-      <View style={styles.container}>
-        <Text>This is a HomeScreen, you can see basic info here.</Text>
-      </View>
+      <ImageBackground  source={require('../assets/hxgn.png')} style={{width: '100%', height: '100%'}}>
+        <View style = { styles.container }>
+          <View style = { styles.header }>
+            <Text>Mobilní aplikace</Text>
+          </View>
+          <View style = {styles.jmena}>
+            <Text>Martin Fořt</Text>
+            <Text>David Soboň</Text>
+            <Text>Luboš Pitter</Text>
+          </View>
+        </View>
+      </ImageBackground>
     )
 }
+
+
 const styles = StyleSheet.create({
-    container: {
+    container:{
       flex: 1,
+    },
+    header: {
+      padding: 20,
+      fontSize: 30,
       alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: colors.grey,
+      marginTop: 50,
+      fontWeight: 'bold',
+    },
+    jmena: {
+      fontSize: 20,
+      marginTop: 200,
+      alignItems: 'center',
+      fontWeight: 'bold',
     },
   })

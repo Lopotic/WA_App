@@ -37,21 +37,21 @@ export default function Form(){
 
     return(
       <View style={styles.container}>
-        <Text style={styles.text}>Please fill this info bellow and submit it to the database</Text>
+        <Text style={styles.nadpis}>Vyplňte informace:</Text>
 
-        <Text style={styles.text}>Name</Text>
+        <Text style={styles.text}>Jméno</Text>
         <TextInput style={styles.inputs} onChangeText={text => setName(text)} placeholder='Name'/>
         
-        <Text style={styles.text}>Surname</Text>
+        <Text style={styles.text}>Příjmení</Text>
         <TextInput onChangeText={text => setSurname(text)} placeholder='Surname'/>
 
-        <Text style={styles.text}>Mobile Phone</Text>
+        <Text style={styles.text}>Telefoní číslo</Text>
         <TextInput onChangeText={text => setMobile(text)} placeholder='Mobile Phone'/>
         
-        <Text style={styles.text}>Email</Text>
+        <Text style={styles.text}>E-mail</Text>
         <TextInput onChangeText={text => setMail(text)} placeholder='Email'/>
 
-        <MyButton title='SAVE' onPress={handleSave} />
+        <MyButton title='ULOŽIT' onPress={handleSave} />
       </View>
     )
   }
@@ -64,6 +64,14 @@ export default function Form(){
     text:{
       fontSize: 18,
       fontStyle: 'italic',
-      marginTop: 15,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    nadpis:{
+      fontSize: 25,
+      fontStyle: 'italic',
+      marginTop: 20,
+      justifyContent: 'space-between',
+      borderBottomWidth: StyleSheet.hairlineWidth,
     },
   })
