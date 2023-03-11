@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect, setState } from 'react';
-import {Text, View, StyleSheet, TextInput } from 'react-native';
+import {Text, View, StyleSheet, TextInput, ImageBackground } from 'react-native';
 import * as SQLite from 'expo-sqlite';
 
 import MyButton from '../components/button';
@@ -36,6 +36,7 @@ export default function Form(){
 
 
     return(
+      <ImageBackground  source={require('../assets/fof.png')} style={{width: '100%', height: '100%'}}>
       <View style={styles.container}>
         <Text style={styles.nadpis}>Vyplňte informace:</Text>
 
@@ -53,6 +54,7 @@ export default function Form(){
 
         <MyButton title='ULOŽIT' onPress={handleSave} />
       </View>
+      </ImageBackground>
     )
   }
 
