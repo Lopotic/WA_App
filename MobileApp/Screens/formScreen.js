@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState, useEffect, setState } from 'react';
 import {Text, View, StyleSheet, TextInput, ImageBackground } from 'react-native';
 import * as SQLite from 'expo-sqlite';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import MyButton from '../components/button';
 const db = SQLite.openDatabase('db.db');
@@ -38,8 +39,10 @@ export default function Form(){
     return(
       <ImageBackground  source={require('../assets/fof.png')} style={{width: '100%', height: '100%'}}>
       <View style={styles.container}>
-        <Text style={styles.nadpis}>Vyplňte informace:</Text>
-
+        <View style={styles.pop}>
+          <Text style={styles.nadpis}>Vyplňte informace</Text>
+          <MaterialCommunityIcons style = { styles.icon } name='card-account-details-outline'/>
+        </View>
         <Text style={styles.text}>Jméno</Text>
         <TextInput style={styles.inputs} onChangeText={text => setName(text)} placeholder='Name'/>
         
@@ -68,12 +71,23 @@ export default function Form(){
       fontStyle: 'italic',
       flexDirection: 'row',
       justifyContent: 'space-between',
+      marginTop: 50,
+      fontWeight: 'bold',
     },
     nadpis:{
       fontSize: 25,
+      fontWeight: 'bold',
       fontStyle: 'italic',
       marginTop: 20,
       justifyContent: 'space-between',
+    },
+    pop:{
+      flexDirection: 'row',
       borderBottomWidth: StyleSheet.hairlineWidth,
     },
+    icon: {
+      marginTop: 27,
+      fontSize: 25,
+      marginHorizontal: 5,
+    }
   })
