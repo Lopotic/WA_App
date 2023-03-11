@@ -1,6 +1,9 @@
 import React from 'react';
 import { Text, StyleSheet, TextInput, View, Alert } from 'react-native';
 import { useState, useEffect } from 'react';
+import PassInput from '../components/passInput';
+
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -18,14 +21,22 @@ const LoginScreen = ({navigation}) => {
       }
     };
 
+    /* const handleSecureText = () => {
+      if (condition) {
+        
+      }
+    } */
     return (
         <SafeAreaView style={styles.temp}>
             <View style={styles.temp2}>
                 <Text>Login</Text>
                 <TextInput id='login' placeholder='login' style={styles.input} value={login} onChangeText={setLogin}/>
                 <Text>Password</Text>
-                <TextInput id='password' placeholder='password' style={styles.input} secureTextEntry={true} value={password} onChangeText={setPassword}/>
+                <TextInput id='password' placeholder='password' style={styles.input} secureTextEntry={true} value={password} 
+                onChangeText={setPassword } />
             </View>
+
+            {/* <PassInput/> */}
                 <MyButton title='Login' onPress={handleLogin}/>
         </SafeAreaView>
     );
