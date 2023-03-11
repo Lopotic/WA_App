@@ -67,7 +67,7 @@ export default function Form(){
       alignItems: 'center',
     },
     text:{
-      fontSize: 18,
+      fontSize: 19,
       fontStyle: 'italic',
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -75,7 +75,7 @@ export default function Form(){
       fontWeight: 'bold',
     },
     nadpis:{
-      fontSize: 25,
+      fontSize: 30,
       fontWeight: 'bold',
       fontStyle: 'italic',
       marginTop: 20,
@@ -86,7 +86,7 @@ export default function Form(){
       borderBottomWidth: StyleSheet.hairlineWidth,
     },
     icon: {
-      marginTop: 27,
+      marginTop: 31,
       fontSize: 25,
       marginHorizontal: 5,
     }

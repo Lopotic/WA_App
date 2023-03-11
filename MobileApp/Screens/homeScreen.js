@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
     },
     icon: {
-      marginTop: 55,
+      marginTop: 53,
       fontSize: 25,
       marginHorizontal: -15,
       borderBottomWidth: StyleSheet.hairlineWidth,

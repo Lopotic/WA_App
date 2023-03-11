@@ -51,9 +51,11 @@ export default function DataScreen(){
         <MyButton title='Load Data' onPress={fetchUsers}/>
         {users.map(user => ( 
           <View key={user.id} style={styles.data}>
-            <Text>Name: {user.name} Surname: {user.surname}</Text>
-            <Text> Phone: {user.phone} Mail: {user.mail}</Text>
-            <Delete title='DELETE' onPress={()=>handleClearAll(user.id)}/> 
+            <Text>Name: {user.name}</Text>
+            <Text>Surname: {user.surname}</Text>
+            <Text>Phone: {user.phone}</Text>
+            <Text>Mail: {user.mail}</Text>
+            <Delete title='SMAZAT' onPress={()=>handleClearAll(user.id)}/> 
           </View>
         ))}
       </SafeAreaView>
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
     },
     data: {
       marginVertical: 15, 
-      backgroundColor: colors.light_blue, 
-      borderRadius: 4,    
+      backgroundColor: `#f8f8ff`, 
+      borderRadius: 5,    
     },
   })

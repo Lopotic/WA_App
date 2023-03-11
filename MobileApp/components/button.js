@@ -7,7 +7,7 @@ import colors from "./colors";
 export default function MyButton(props) {
     const { onPress, pressed, title } = props;
     return (
-      <Pressable onPress={onPress}  style={({ pressed }) => [{ backgroundColor: pressed ? colors.grey : 'white' }, styles.button ]}>
+      <Pressable onPress={onPress}  style={({ pressed }) => [{ backgroundColor: pressed ? colors.grey : `white` }, styles.button ]}>
         <Text style={[{ color: pressed ? 'white' : colors.black }, styles.text]}>{title}</Text>
       </Pressable>
     );
