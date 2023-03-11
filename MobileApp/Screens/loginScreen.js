@@ -11,7 +11,7 @@ const LoginScreen = ({navigation}) => {
     const [password, setPassword] = useState('');
   
     const handleLogin = () => {
-      if (login === 'hlavka123' && password === '1234') {
+      if (login === 'frajer' && password === '1234') {
         navigation.navigate('the_rest', { screen: 'Home' });
       } else {
         Alert.alert('Špatné heslo nebo jméno, prosím zkuste znovu');
