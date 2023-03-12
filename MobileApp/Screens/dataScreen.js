@@ -51,22 +51,10 @@ export default function DataScreen(){
         <MyButton title='Load Data' onPress={fetchUsers}/>
         {users.map(user => ( 
           <View key={user.id} style={styles.data}>
-            <View style={styles.row}>
-              <Text>Name:</Text>
-              <Text>{user.name}</Text>
-            </View>  
-            <View style={styles.row}>
-              <Text>Surname:</Text>
-              <Text> {user.surname}</Text>
-            </View>
-            <View style={styles.row}>
-              <Text>Phone:</Text>
-              <Text>{user.phone}</Text>
-            </View>
-            <View style={styles.row}>
-              <Text>Mail:</Text>
-              <Text>{user.mail}</Text>
-            </View>
+            <Text>Name: {user.name}</Text>
+            <Text>Surname: {user.surname}</Text>
+            <Text>Phone: {user.phone}</Text>
+            <Text>Mail: {user.mail}</Text>
             <Delete title='SMAZAT' onPress={()=>handleClearAll(user.id)}/> 
           </View>
         ))}
