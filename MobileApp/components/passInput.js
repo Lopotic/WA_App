@@ -15,7 +15,7 @@ const PassInput = ({
 
     return (
         <View style={styles.inputContainer}>
-            <TextInput placeholder='password' style={{flex: 1}} secureTextEntry={hidePassword} onChangeText={onChangeText}/>
+            <TextInput placeholder='password' style={{flex: 1}} secureTextEntry={!hidePassword} onChangeText={onChangeText}/>
             <MaterialCommunityIcons
             onPress={() => setHidePassword(!hidePassword) }
             style={{marginTop: 4, fontSize:18}}

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image ,ImageBackground} from 'react-native';
-import colors from '../components/colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function HomeScreen({navigation}){

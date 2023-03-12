@@ -6,7 +6,6 @@ import Delete from '../components/delete';
 import MyButton from '../components/button';
 
 import * as SQlite from 'expo-sqlite';
-import colors from '../components/colors';
 const db = SQlite.openDatabase('db.db');
 
 export default function DataScreen(){
@@ -45,7 +44,7 @@ export default function DataScreen(){
   };
 
   return(
-    <ImageBackground  source={require('../assets/fof.png')} style={{width: '100%', height: '100%'}}>
+    <ImageBackground source={require('../assets/fof.png')} style={{width: '100%', height: '100%'}}>
     <ScrollView>
       <SafeAreaView style={styles.container}>
         <MyButton title='Load Data' onPress={fetchUsers}/>

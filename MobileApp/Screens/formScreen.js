@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect, setState } from 'react';
+import { useState, useEffect } from 'react';
 import {Text, View, StyleSheet, TextInput, ImageBackground, ScrollView } from 'react-native';
 import * as SQLite from 'expo-sqlite';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -75,6 +75,7 @@ export default function Form(){
       justifyContent: 'space-between',
       marginTop: 30,
       fontWeight: 'bold',
+      marginBottom: 10,
     },
     nadpis:{
       fontSize: 30,

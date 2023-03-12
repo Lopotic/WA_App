@@ -1,9 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, TextInput, View, Alert } from 'react-native';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import PassInput from '../components/passInput';
-
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -14,7 +12,7 @@ const LoginScreen = ({navigation}) => {
     const [password, setPassword] = useState('');
   
     const handleLogin = () => {
-      if (login === 'frajer' && password === '1234') {
+      if (login === 'login' && password === 'heslo123') {
         navigation.navigate('the_rest', { screen: 'Home' });
       } else {
         Alert.alert('Špatné heslo nebo jméno, prosím zkuste znovu');
@@ -23,6 +21,7 @@ const LoginScreen = ({navigation}) => {
 
     return (
         <SafeAreaView style={styles.temp}>
+          <Text style={styles.header}>Vítejte v naší aplikaci</Text>
             <View style={styles.temp2}>
                 <Text>Login</Text>
                 <TextInput placeholder='login' style={styles.input} onChangeText={setLogin}/>
@@ -50,5 +49,12 @@ const styles = StyleSheet.create({
         marginBottom: 16,
         width: 250,
       },
+      header: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        marginTop: 25,
+        textDecorationLine: 'underline',
+      },
 })
+
 export default LoginScreen;
