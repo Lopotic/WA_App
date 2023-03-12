@@ -19,7 +19,7 @@ const PassInput = ({
             <MaterialCommunityIcons
             onPress={() => setHidePassword(!hidePassword) }
             style={{marginTop: 4, fontSize:18}}
-            name={hidePassword ? 'eye-outline' : 'eye-off-outline'}
+            name={hidePassword ? 'eye-off-outline' : 'eye-outline'}
             />    
         </View>
     );

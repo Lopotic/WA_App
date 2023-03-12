@@ -21,11 +21,6 @@ const LoginScreen = ({navigation}) => {
       }
     };
 
-    /* const handleSecureText = () => {
-      if (condition) {
-        
-      }
-    } */
     return (
         <SafeAreaView style={styles.temp}>
             <View style={styles.temp2}>
