@@ -51,10 +51,22 @@ export default function DataScreen(){
         <MyButton title='Load Data' onPress={fetchUsers}/>
         {users.map(user => ( 
           <View key={user.id} style={styles.data}>
-            <Text>Name: {user.name}</Text>
-            <Text>Surname: {user.surname}</Text>
-            <Text>Phone: {user.phone}</Text>
-            <Text>Mail: {user.mail}</Text>
+            <View style={styles.row}>
+              <Text>Name:</Text>
+              <Text>{user.name}</Text>
+            </View>  
+            <View style={styles.row}>
+              <Text>Surname:</Text>
+              <Text> {user.surname}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text>Phone:</Text>
+              <Text>{user.phone}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text>Mail:</Text>
+              <Text>{user.mail}</Text>
+            </View>
             <Delete title='SMAZAT' onPress={()=>handleClearAll(user.id)}/> 
           </View>
         ))}
@@ -69,12 +81,18 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: 'center',
       marginVertical: 15,
-      marginTop: -80,      
-
     },
     data: {
-      marginVertical: 15, 
+      marginTop:30,
       backgroundColor: `#f8f8ff`, 
-      borderRadius: 5,    
+      borderRadius: 5,
+      borderColor: `#f8f8ff`,
+      borderRightWidth: 25,
+      borderLeftWidth: 25,
+      borderWidth: 10,
+    },
+    row:{
+      flexDirection:'row',
+      alignItems: 'stretch',
     },
   })

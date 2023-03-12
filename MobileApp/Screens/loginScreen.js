@@ -30,13 +30,10 @@ const LoginScreen = ({navigation}) => {
         <SafeAreaView style={styles.temp}>
             <View style={styles.temp2}>
                 <Text>Login</Text>
-                <TextInput id='login' placeholder='login' style={styles.input} value={login} onChangeText={setLogin}/>
+                <TextInput placeholder='login' style={styles.input} onChangeText={setLogin}/>
                 <Text>Password</Text>
-                <TextInput id='password' placeholder='password' style={styles.input} secureTextEntry={true} value={password} 
-                onChangeText={setPassword } />
+                <PassInput onChangeText={setPassword }/>
             </View>
-
-            {/* <PassInput/> */}
                 <MyButton title='Login' onPress={handleLogin}/>
         </SafeAreaView>
     );

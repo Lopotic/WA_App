@@ -1,20 +1,24 @@
-/* import React from 'react';
+import React from 'react';
 import {View, Text, TextInput, StyleSheet} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+
+import colors from './colors';
 
 
 const PassInput = ({
     iconName,
     password,
+    onChangeText,
     ...props
   }) => {
     const [hidePassword, setHidePassword] = React.useState(password);
 
     return (
-        <View style={styles.container}>
-            <TextInput secureTextEntry={hidePassword}/>
+        <View style={styles.inputContainer}>
+            <TextInput placeholder='password' style={{flex: 1}} secureTextEntry={hidePassword} onChangeText={onChangeText}/>
             <MaterialCommunityIcons
-            onPress={() => setHidePassword(!hidePassword)}
+            onPress={() => setHidePassword(!hidePassword) }
+            style={{marginTop: 4, fontSize:18}}
             name={hidePassword ? 'eye-outline' : 'eye-off-outline'}
             />    
         </View>
@@ -22,10 +26,15 @@ const PassInput = ({
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'flex-start',
-    }
+    inputContainer: {
+        borderWidth: 1,
+        borderColor: '#ccc',
+        borderRadius: 4,
+        padding: 10,
+        marginBottom: 16,
+        width: 250,
+        flexDirection: 'row',
+    },
 })
 
-export default PassInput; */
+export default PassInput;
