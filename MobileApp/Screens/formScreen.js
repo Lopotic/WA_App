@@ -45,16 +45,16 @@ export default function Form(){
             <MaterialCommunityIcons style = { styles.icon } name='card-account-details-outline'/>
           </View>
           <Text style={styles.text}>Jméno</Text>
-          <TextInput style={styles.inputs} onChangeText={text => setName(text)} placeholder='Name'/>
+          <TextInput  style={styles.input} onChangeText={text => setName(text)} placeholder='Name'/>
         
           <Text style={styles.text}>Příjmení</Text>
-          <TextInput onChangeText={text => setSurname(text)} placeholder='Surname'/>
+          <TextInput style={styles.input} onChangeText={text => setSurname(text)} placeholder='Surname'/>
 
           <Text style={styles.text}>Telefoní číslo</Text>
-          <TextInput onChangeText={text => setMobile(text)} placeholder='Mobile Phone'/>
+          <TextInput style={styles.input} onChangeText={text => setMobile(text)} placeholder='Mobile Phone'/>
         
           <Text style={styles.text}>E-mail</Text>
-          <TextInput onChangeText={text => setMail(text)} placeholder='Email'/>
+          <TextInput style={styles.input} onChangeText={text => setMail(text)} placeholder='Email'/>
 
           <MyButton title='ULOŽIT' onPress={handleSave} />
         </View>
@@ -73,7 +73,7 @@ export default function Form(){
       fontStyle: 'italic',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      marginTop: 50,
+      marginTop: 30,
       fontWeight: 'bold',
     },
     nadpis:{
@@ -91,5 +91,13 @@ export default function Form(){
       marginTop: 31,
       fontSize: 25,
       marginHorizontal: 5,
-    }
+    },
+    input: {
+      borderWidth: 1,
+      borderColor: '#ccc',
+      borderRadius: 4,
+      padding: 10,
+      marginBottom: 10,
+      width: 250,
+    },
   })
